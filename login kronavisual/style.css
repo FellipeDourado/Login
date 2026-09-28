@@ -1,0 +1,493 @@
+:root {
+
+    /* Cores principais */
+    --cor-primaria: #ED3227;
+    --cor-secundaria: #727272;
+
+    /* Modo escuro */
+    --cor-fundo-card: rgba(0, 0, 0, 0.8);
+    --cor-borda-card: rgba(255, 255, 255, 0.08);
+    --cor-texto: #FFFFFF;
+    --cor-texto-secundario: rgba(255, 255, 255, 0.55);
+    --cor-input-fundo: transparent;
+    --cor-input-borda: rgba(255, 255, 255, 0.15);
+    --cor-botao: #FFFFFF;
+    --cor-botao-texto: #000000;
+    --cor-sombra: rgba(0, 0, 0, 0.3);
+
+    /* Tema claro */
+    --claro-fundo-card: rgba(255, 255, 255, 0.8);
+    --claro-borda-card: rgba(0, 0, 0, 0.08);
+    --claro-texto: #000000;
+    --claro-texto-secundario: #777777;
+    --claro-input-fundo: rgba(255, 255, 255, 0.25);
+    --claro-input-borda: #CCCCCC;
+    --claro-botao: #000000;
+    --claro-botao-texto: #FFFFFF;
+    --claro-sombra: rgba(0, 0, 0, 0.15);
+}
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: url('./assetslogin/dark.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    width: 105px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+}
+
+/* Main */
+
+main {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+/* Card */
+
+.card_box {
+    width: 100%;
+    max-width: 360px;
+    background: var(--cor-fundo-card);
+    border: 1px solid var(--cor-borda-card);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px var(--cor-sombra);
+}
+
+/* Banner */
+
+.banner_login {
+    width: 100%;
+    height: 150px;
+    display: block;
+    object-fit: cover;
+}
+
+/* Formulário */
+
+.formulario_box {
+    width: 100%;
+    padding: 20px;
+}
+
+/* Título */
+
+.titulo {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.titulo h1 {
+    margin: 0;
+    color: var(--cor-texto);
+    font-size: 24px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Botão tema */
+
+.tema {
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.tema:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Campos */
+
+.campo {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.campo input {
+    width: 100%;
+    height: 50px;
+    padding: 0 45px 0 15px;
+    border: 1px solid var(--cor-input-borda);
+    border-radius: 25px;
+    outline: none;
+    background-color: var(--cor-input-fundo);
+    color: var(--cor-texto);
+    font-size: 15px;
+}
+
+.campo input:focus {
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 0 2px rgba(237, 50, 39, 0.12);
+}
+
+.campo input::placeholder {
+    color: var(--cor-texto-secundario);
+}
+
+/* Ícones */
+
+.icone_usuario,
+.icone_senha {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.icone_usuario {
+    width: 20px;
+    height: 20px;
+}
+
+.icone_senha {
+    width: 20px;
+    height: 16px;
+}
+
+/* Opções */
+
+.opcoes {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 0;
+    padding: 0 5px;
+    font-size: 14px;
+}
+
+/* Lembrar */
+
+.lembrar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.lembrar input {
+    cursor: pointer;
+    accent-color: var(--cor-primaria);
+}
+
+label {
+    color: var(--cor-texto);
+    font-size: 14px;
+    cursor: pointer;
+}
+
+/* Esqueci senha */
+
+.esqueci-senha {
+    display: block;
+    color: var(--cor-texto);
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.esqueci-senha:hover {
+    color: var(--cor-primaria);
+}
+
+/* Botão entrar */
+
+.entrar {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    padding: 0 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--cor-botao);
+    color: var(--cor-botao-texto);
+    font-size: 16px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.entrar:hover {
+    box-shadow: 0 5px 15px var(--cor-sombra);
+}
+
+.entrar:active {
+    transform: scale(0.98);
+}
+
+.texto {
+    position: relative;
+    z-index: 2;
+}
+
+.wave {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    background: var(--cor-secundaria);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.6s ease;
+}
+
+.active .wave {
+    transform: translate(-50%, -50%) scale(20);
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.direitos {
+    color: var(--cor-texto);
+    font-size: 13px;
+    text-align: center;
+}
+
+/* Modo claro */
+
+body.claro {
+    background-image: url('./assetslogin/modo_claro.png');
+}
+
+body.claro .card_box {
+    background: var(--claro-fundo-card);
+    border-color: var(--claro-borda-card);
+    box-shadow: 0 10px 30px var(--claro-sombra);
+}
+
+body.claro .titulo h1 {
+    color: var(--claro-texto);
+}
+
+body.claro .campo input {
+    color: var(--claro-texto);
+    border-color: var(--claro-input-borda);
+    background-color: var(--claro-input-fundo);
+}
+
+body.claro .campo input::placeholder {
+    color: var(--claro-texto-secundario);
+}
+
+body.claro label {
+    color: var(--claro-texto);
+}
+
+body.claro .esqueci-senha {
+    color: var(--cor-primaria);
+}
+
+body.claro .entrar {
+    background-color: var(--claro-botao);
+    color: var(--claro-botao-texto);
+}
+
+body.claro .direitos {
+    color: var(--claro-texto);
+}
+
+body.claro .tema:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+/* Tablets */
+
+@media (max-width: 600px) {
+
+    main {
+        padding: 20px 15px;
+    }
+
+    .card_box {
+        max-width: 400px;
+    }
+
+    .banner_login {
+        height: 145px;
+    }
+}
+
+/* Celulares */
+
+@media (max-width: 480px) {
+
+    header {
+        padding: 8px 15px;
+    }
+
+    .logo {
+        width: 90px;
+    }
+
+    main {
+        padding: 15px 12px;
+    }
+
+    .card_box {
+        max-width: 100%;
+    }
+
+    .banner_login {
+        height: 130px;
+    }
+
+    .formulario_box {
+        padding: 18px 16px;
+    }
+
+    .titulo h1 {
+        font-size: 22px;
+    }
+
+    .campo input {
+        height: 48px;
+        font-size: 14px;
+    }
+
+    .opcoes {
+        font-size: 13px;
+    }
+
+    label,
+    .esqueci-senha {
+        font-size: 13px;
+    }
+
+    .entrar {
+        height: 48px;
+        font-size: 15px;
+    }
+
+    .direitos {
+        font-size: 11px;
+    }
+}
+
+/* Celulares pequenos */
+
+@media (max-width: 360px) {
+
+    .logo {
+        width: 80px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .banner_login {
+        height: 115px;
+    }
+
+    .formulario_box {
+        padding: 16px 13px;
+    }
+
+    .titulo h1 {
+        font-size: 20px;
+    }
+
+    .opcoes {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .esqueci-senha {
+        align-self: flex-end;
+    }
+
+    .direitos {
+        font-size: 10px;
+    }
+}
+
+/* Telas baixas */
+
+@media (max-height: 650px) {
+
+    header {
+        padding: 5px 15px;
+    }
+
+    main {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .banner_login {
+        height: 110px;
+    }
+
+    .formulario_box {
+        padding: 15px;
+    }
+
+    footer {
+        padding: 8px 15px;
+    }
+}
