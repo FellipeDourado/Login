@@ -18,6 +18,10 @@ A aplicação foi estruturada separando HTML, CSS e JavaScript, permitindo uma o
 - CSS3
 - JavaScript
 
+## 📱 Responsividade
+
+A interface foi desenvolvida de forma totalmente responsiva, adaptando seu layout para diferentes tamanhos de tela, incluindo dispositivos móveis, tablets e desktops.
+
 ## 📂 Estrutura do projeto
 
 ```text
